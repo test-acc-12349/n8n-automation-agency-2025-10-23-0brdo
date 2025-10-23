@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transform your business with AI automation solutions from N8N Automation Agency. Custom AI solutions, process automation, and 24/7 support.">
+    <meta name="keywords" content="AI automation, N8N, business automation, AI solutions, process automation">
+    <meta name="author" content="N8N Automation Agency">
+    <meta property="og:title" content="N8N Automation Agency - Transform Your Business with AI Automation">
+    <meta property="og:description" content="Reduce costs by 60%, save 20 hours weekly, and scale effortlessly with our AI automation solutions.">
+    <meta property="og:type" content="website">
+    <title>N8N Automation Agency - AI Automation Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+        }
+
+        .card-hover {
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .button-hover {
+            transition: all 300ms ease;
+        }
+
+        .button-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.4);
+        }
+
+        .faq-transition {
+            transition: all 300ms ease;
+        }
+
+        .star-color {
+            color: #fbbf24;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(17, 24, 39, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-gradient::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .feature-grid-item {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .benefit-item {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+            border-left: 4px solid #3b82f6;
+        }
+
+        .faq-item {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .faq-question {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        .testimonial-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cta-section {
+            background-image: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.85)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .footer-link {
+            transition: color 300ms ease;
+        }
+
+        .footer-link:hover {
+            color: #3b82f6;
+        }
+
+        @media (max-width: 768px) {
+            .cta-section {
+                background-attachment: scroll;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <!-- Header Navigation -->
+    <header class="w-full">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-bolt text-white text-lg"></i>
+                </div>
+                <span class="text-xl font-bold text-white hidden sm:inline">N8N Automation</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#features" class="text-gray-300 hover:text-white transition-colors duration-300 font-medium">Features</a>
+                <a href="#benefits" class="text-gray-300 hover:text-white transition-colors duration-300 font-medium">Benefits</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-white transition-colors duration-300 font-medium">Testimonials</a>
+                <a href="#faq" class="text-gray-300 hover:text-white transition-colors duration-300 font-medium">FAQ</a>
+                <a href="https://aiautomation.agency/book-demo" class="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold button-hover">
+                    Book Demo
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-button md:hidden text-gray-300 hover:text-white transition-colors duration-300" aria-label="Toggle menu">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu hidden absolute top-full left-0 right-0 bg-gray-800 border-t border-gray-700 md:hidden">
+                <div class="flex flex-col space-y-4 p-6">
+                    <a href="#features" class="text-gray-300 hover:text-white transition-colors duration-300 font-medium">Features</a>
+                    <a href="#benefits" class="text-gray-300 hover:text-white transition-colors duration-300 font-medium">Benefits</a>
+                    <a href="#testimonials" class="text-gray-300 hover:text-white transition-colors duration-300 font-medium">Testimonials</a>
+                    <a href="#faq" class="text-gray-300 hover:text-white transition-colors duration-300 font-medium">FAQ</a>
+                    <a href="https://aiautomation.agency/book-demo" class="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold text-center button-hover">
+                        Book Demo
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-24 md:py-32 lg:py-40 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+                        <span class="text-white">Transform Your Business</span>
+                        <br>
+                        <span class="gradient-text">with AI Automation</span>
+                    </h1>
+                    <p class="text-xl text-gray-300 leading-relaxed max-w-xl">
+                        Harness the power of artificial intelligence to automate complex workflows, eliminate manual tasks, and unlock unprecedented growth. Our cutting-edge AI solutions are designed to revolutionize how your business operates.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="https://aiautomation.agency/book-demo" class="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-bold text-lg button-hover text-center">
+                            Schedule Your Demo
+                        </a>
+                        <a href="#features" class="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-bold text-lg button-hover text-center hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            Learn More
+                        </a>
+                    </div>
+                    <div class="flex items-center space-x-8 pt-8">
+                        <div>
+                            <div class="text-3xl font-bold text-white">60%</div>
+                            <p class="text-sm text-gray-400">Cost Reduction</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-white">20h</div>
+                            <p class="text-sm text-gray-400">Weekly Savings</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-white">∞</div>
+                            <p class="text-sm text-gray-400">Scalability</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden lg:block">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl blur-3xl opacity-20"></div>
+                        <div class="relative bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-2xl p-8 space-y-6">
+                            <div class="flex items-center space-x-4 p-4 bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-lg border border-blue-500/30">
+                                <i class="fas fa-robot text-2xl text-blue-400"></i>
+                                <div>
+                                    <p class="font-semibold text-white">AI-Powered Automation</p>
+                                    <p class="text-sm text-gray-400">24/7 Intelligent Processing</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4 p-4 bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-lg border border-blue-500/30">
+                                <i class="fas fa-cogs text-2xl text-purple-400"></i>
+                                <div>
+                                    <p class="font-semibold text-white">Custom Integration</p>
+                                    <p class="text-sm text-gray-400">Seamless Workflow Connection</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4 p-4 bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-lg border border-blue-500/30">
+                                <i class="fas fa-chart-line text-2xl text-green-400"></i>
+                                <div>
+                                    <p class="font-semibold text-white">Real-Time Analytics</p>
+                                    <p class="text-sm text-gray-400">Data-Driven Insights</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 md:py-32 bg-gray-800/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                    Powerful Features Built for Modern Businesses
+                </h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Our comprehensive suite of AI automation tools provides everything you need to streamline operations and drive growth.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1: Custom AI Solutions -->
+                <div class="feature-grid-item card-hover rounded-xl p-8 backdrop-blur-sm">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Custom AI Solutions</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        Tailored artificial intelligence systems designed specifically for your unique business challenges. Our expert team develops sophisticated algorithms that learn and adapt to your specific workflows, ensuring maximum efficiency and precision.
+                    </p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-blue-400"></i>
+                            <span>Personalized AI Models</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-blue-400"></i>
+                            <span>Machine Learning Integration</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-blue-400"></i>
+                            <span>Continuous Optimization</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 2: Process Automation -->
+                <div class="feature-grid-item card-hover rounded-xl p-8 backdrop-blur-sm">
+                    <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-cogs text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Process Automation</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        Eliminate repetitive manual tasks and streamline complex business processes with intelligent automation. From data entry to customer service, our solutions handle routine operations with precision and reliability, freeing your team to focus on strategic initiatives.
+                    </p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-purple-400"></i>
+                            <span>Workflow Optimization</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-purple-400"></i>
+                            <span>Error Reduction</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-purple-400"></i>
+                            <span>Speed Enhancement</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 3: 24/7 AI Support -->
+                <div class="feature-grid-item card-hover rounded-xl p-8 backdrop-blur-sm">
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-headset text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">24/7 AI Support</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        Round-the-clock intelligent support powered by advanced AI systems that understand your business context. Our dedicated support team works alongside cutting-edge AI to resolve issues instantly, minimize downtime, and ensure your operations run smoothly at all times.
+                    </p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-400"></i>
+                            <span>Instant Response Times</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-400"></i>
+                            <span>Expert Team Available</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-400"></i>
+                            <span>Proactive Monitoring</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-24 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                    Transform Your Bottom Line
+                </h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Measurable results that directly impact your business performance and profitability.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Benefit 1: Cost Reduction -->
+                <div class="benefit-item card-hover rounded-xl p-8 backdrop-blur-sm">
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <h3 class="text-4xl font-bold gradient-text">60%</h3>
+                            <p class="text-gray-300 font-semibold mt-2">Cost Reduction</p>
+                        </div>
+                        <i class="fas fa-chart-line text-4xl text-blue-400 opacity-30"></i>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        Dramatically reduce operational expenses by automating resource-intensive processes. Our AI solutions eliminate unnecessary overhead, optimize resource allocation, and deliver substantial savings that directly improve your profit margins.
+                    </p>
+                    <div class="space-y-2 text-sm text-gray-400">
+                        <p class="flex items-center space-x-2">
+                            <i class="fas fa-arrow-right text-blue-400"></i>
+                            <span>Reduced labor costs</span>
+                        </p>
+                        <p class="flex items-center space-x-2">
+                            <i class="fas fa-arrow-right text-blue-400"></i>
+                            <span>Lower error-related expenses</span>
+                        </p>
+                        <p class="flex items-center space-x-2">
+                            <i class="fas fa-arrow-right text-blue-400"></i>
+                            <span>Optimized resource usage</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 2: Time Savings -->
+                <div class="benefit-item card-hover rounded-xl p-8 backdrop-blur-sm">
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <h3 class="text-4xl font-bold gradient-text">20h</h3>
+                            <p class="text-gray-300 font-semibold mt-2">Weekly Savings</p>
+                        </div>
+                        <i class="fas fa-hourglass-end text-4xl text-purple-400 opacity-30"></i>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        Reclaim valuable time for your team by automating routine tasks and manual processes. Your employees can focus on high-value strategic work instead of repetitive administrative duties, boosting productivity and employee satisfaction.
+                    </p>
+                    <div class="space-y-2 text-sm text-gray-400">
+                        <p class="flex items-center space-x-2">
+                            <i class="fas fa-arrow-right text-purple-400"></i>
+                            <span>Enhanced productivity</span>
+                        </p>
+                        <p class="flex items-center space-x-2">
+                            <i class="fas fa-arrow-right text-purple-400"></i>
+                            <span>Faster task completion</span>
+                        </p>
+                        <p class="flex items-center space-x-2">
+                            <i class="fas fa-arrow-right text-purple-400"></i>
+                            <span>Improved team morale</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 3: Scalability -->
+                <div class="benefit-item card-hover rounded-xl p-8 backdrop-blur-sm">
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <h3 class="text-4xl font-bold gradient-text">∞</h3>
+                            <p class="text-gray-300 font-semibold mt-2">Scale Effortlessly</p>
+                        </div>
+                        <i class="fas fa-rocket text-4xl text-green-400 opacity-30"></i>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        Grow your business without proportional increases in operational complexity. Our scalable AI solutions adapt seamlessly to your expanding needs, handling increased volume and complexity without requiring additional infrastructure investment.
+                    </p>
+                    <div class="space-y-2 text-sm text-gray-400">
+                        <p class="flex items-center space-x-2">
+                            <i class="fas fa-arrow-right text-green-400"></i>
+                            <span>Unlimited growth potential</span>
+                        </p>
+                        <p class="flex items-center space-x-2">
+                            <i class="fas fa-arrow-right text-green-400"></i>
+                            <span>Consistent performance</span>
+                        </p>
+                        <p class="flex items-center space-x-2">
+                            <i class="fas fa-arrow-right text-green-400"></i>
+                            <span>Future-proof systems</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Benefits Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                <div class="bg-gradient-to-br from-blue-500/10 to-purple-600/10 border border-blue-500/20 rounded-xl p-8 card-hover">
+                    <h4 class="text-xl font-bold text-white mb-4 flex items-center space-x-3">
+                        <i class="fas fa-shield-alt text-blue-400 text-2xl"></i>
+                        <span>Enterprise-Grade Security</span>
+                    </h4>
+                    <p class="text-gray-300">
+                        Bank-level encryption and security protocols protect your sensitive data. Our systems comply with GDPR, HIPAA, and other major regulatory standards, ensuring your information remains secure and compliant.
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-500/10 to-pink-600/10 border border-purple-500/20 rounded-xl p-8 card-hover">
+                    <h4 class="text-xl font-bold text-white mb-4 flex items-center space-x-3">
+                        <i class="fas fa-sync-alt text-purple-400 text-2xl"></i>
+                        <span>Seamless Integration</span>
+                    </h4>
+                    <p class="text-gray-300">
+                        Connect effortlessly with your existing tools and systems. Our platform supports integration with hundreds of popular business applications, ensuring smooth workflow without disruption to your operations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 md:py-32 bg-gray-800/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                    Trusted by Industry Leaders
+                </h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    See how businesses like yours are transforming operations with our AI automation solutions.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card card-hover rounded-xl p-8 backdrop-blur-sm">
+                    <div class="flex items-center space-x-1 mb-4">
+                        <i class="fas fa-star star-color"></i>
+                        <i class="fas fa-star star-color"></i>
+                        <i class="fas fa-star star-color"></i>
+                        <i class="fas fa-star star-color"></i>
+                        <i class="fas fa-star star-color"></i>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        "The transformation has been remarkable. Within three months, we reduced our data entry costs by 70% and eliminated countless manual errors. The AI automation platform integrated seamlessly with our existing systems, and the support team has been exceptional. I honestly can't imagine going back to our old processes."
+                    </p>
+                    <div class="border-t border-gray-700 pt-6">
+                        <p class="font-bold text-white">Sarah Mitchell</p>
+                        <p class="text-sm text-gray-400">Operations Director, TechVenture Inc.</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card card-hover rounded-xl p-8 backdrop-blur-sm">
+                    <div class="flex items-center space-x-1 mb-4">
+                        <i class="fas fa-star star-color"></i>
+                        <i class="fas fa-star star-color"></i>
+                        <i class="fas fa-star star-color"></i>
+                        <i class="fas fa-star star-color"></i>
+                        <i class="fas fa-star star-color"></i>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        "We were overwhelmed with customer service requests. After implementing N8N's AI automation, our response time dropped from 48 hours to instant. Our team now handles three times the volume with half the staff. The ROI was realized in just six weeks."
+                    </p>
+                    <div class="border-t border-gray-700 pt-6">
+                        <p class="font-bold text-white">James Rodriguez</p>
+                        <p class="text-sm text-gray-400">CEO, Digital Solutions Group</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card card-hover rounded-xl p-8 backdrop-blur-sm">
+                    <div class="flex items-center space-x-1 mb-4">
+                        <i class="fas fa-star star-color"></i>
+                        <i class="fas fa-star star-color"></i>
+                        <i class="fas fa-star star-color"></i>
+                        <i class="fas fa-star star-color"></i>
+                        <i class="fas fa-star star-color"></i>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        "What impressed me most was the custom AI solution tailored specifically to our unique workflows. The team took time to understand our business deeply before implementing anything. The result? A 55% efficiency gain and happier employees who can focus on creative work rather than repetitive tasks."
+                    </p>
+                    <div class="border-t border-gray-700 pt-6">
+                        <p class="font-bold text-white">Emily Chen</p>
+                        <p class="text-sm text-gray-400">Managing Partner, Creative Studios</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card card-hover rounded-xl p-8 backdrop-blur-sm">
+                    <div class="flex items-center space-x-1 mb-4">
+                        <i class="fas fa-star star-color"></i>
+                        <i class="fas fa-star star-color"></i>
+                        <i class="fas fa-star star-color"></i>
+                        <i class="fas fa-star star-color"></i>
+                        <i class="fas fa-star star-color"></i>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        "The 24/7 AI support has been invaluable. There's always someone available to help, and the system learns from each interaction. We've scaled our operations from 10 to 50 employees without proportional increases in overhead. This is the future of business automation."
+                    </p>
+                    <div class="border-t border-gray-700 pt-6">
+                        <p class="font-bold text-white">Michael Thompson</p>
+                        <p class="text-sm text-gray-400">Founder, Growth Dynamics LLC</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="py-24 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl blur-3xl opacity-20"></div>
+                    <div class="relative bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-2xl p-12 space-y-8">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-award text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-bold text-white">500+</p>
+                                <p class="text-gray-400">Successful Implementations</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-users text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-bold text-white">1000+</p>
+                                <p class="text-gray-400">Happy Clients Worldwide</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-globe text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-bold text-white">45</p>
+                                <p class="text-gray-400">Countries Served</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white leading-tight">
+                        About N8N Automation Agency
+                    </h2>
+
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        Founded in 2019 by a team of AI researchers and automation experts, N8N Automation Agency emerged from a simple yet powerful vision: to democratize artificial intelligence and make advanced automation accessible to businesses of all sizes. Our founders recognized that many organizations were trapped in outdated, manual workflows that drained resources and limited growth potential. They believed that cutting-edge AI technology should be available not just to tech giants, but to every ambitious business ready to innovate. What started as a small startup has evolved into a trusted partner for hundreds of enterprises worldwide, each transforming their operations through our intelligent automation solutions.
+                    </p>
+
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        Today, we remain committed to our core mission: empowering businesses to achieve more with less. We believe in the transformative power of AI and automation, not as replacements for human creativity and judgment, but as force multipliers that amplify human potential. Our team of world-class engineers, AI specialists, and customer success experts work tirelessly to deliver solutions that don't just meet expectations, but exceed them. We're proud of our 98% customer satisfaction rate and our commitment to continuous innovation. At N8N, we're not just building software—we're building partnerships with our clients, understanding their unique challenges, and crafting custom solutions that drive real, measurable business impact.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="https://aiautomation.agency/book-demo" class="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-bold button-hover text-center">
+                            Get Started Today
+                        </a>
+                        <a href="mailto:hello@aiautomation.agency" class="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-bold button-hover text-center hover:bg-blue-500 hover:text-white transition-all duration-300">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 md:py-32 bg-gray-800/30">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-xl text-gray-300">
+                    Find answers to common questions about our AI automation solutions and services.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item rounded-lg p-6 backdrop-blur-sm">
+                    <div class="faq-question flex items-center justify-between">
+                        <h3 class="text-lg font-semibold text-white">How long does it typically take to implement AI automation?</h3>
+                        <i class="faq-icon fas fa-chevron-down text-blue-400 transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer hidden faq-transition mt-4 pt-4 border-t border-gray-700">
+                        <p class="text-gray-300 leading-relaxed">
+                            Implementation timelines vary based on complexity, but most organizations see their first automated processes running within 2-4 weeks. Simple integrations can go live in days, while comprehensive enterprise solutions typically take 4-8 weeks. Our phased approach allows you to start seeing ROI immediately while we continue building more sophisticated automations. We provide a detailed timeline during your initial consultation and maintain transparent communication throughout the process.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item rounded-lg p-6 backdrop-blur-sm">
+                    <div class="faq-question flex items-center justify-between">
+                        <h3 class="text-lg font-semibold text-white">What systems and applications can be integrated with your AI platform?</h3>
+                        <i class="faq-icon fas fa-chevron-down text-blue-400 transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer hidden faq-transition mt-4 pt-4 border-t border-gray-700">
+                        <p class="text-gray-300 leading-relaxed">
+                            Our platform supports integration with 500+ popular business applications including Salesforce, HubSpot, QuickBooks, Shopify, Slack, Microsoft Teams, Google Workspace, and many more. If your specific application isn't listed, our development team can create custom integrations. We use industry-standard APIs and webhooks to ensure seamless data flow between systems. Additionally, our platform supports custom applications through our flexible API framework, giving you virtually unlimited integration possibilities.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item rounded-lg p-6 backdrop-blur-sm">
+                    <div class="faq-question flex items-center justify-between">
+                        <h3 class="text-lg font-semibold text-white">How is data security and privacy handled?</h3>
+                        <i class="faq-icon fas fa-chevron-down text-blue-400 transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer hidden faq-transition mt-4 pt-4 border-t border-gray-700">
+                        <p class="text-gray-300 leading-relaxed">
+                            Security is paramount in our design. We employ bank-level encryption (AES-256) for data at rest and TLS 1.3 for data in transit. Our infrastructure is hosted on secure, redundant servers with automatic backups. We maintain SOC 2 Type II certification and comply with GDPR, HIPAA, CCPA, and other major regulatory standards. All data is isolated per client with no cross-contamination. We conduct regular security audits, penetration testing, and vulnerability assessments. You maintain complete control over your data and can request deletion at any time.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item rounded-lg p-6 backdrop-blur-sm">
+                    <div class="faq-question flex items-center justify-between">
+                        <h3 class="text-lg font-semibold text-white">What kind of support and training is provided?</h3>
+                        <i class="faq-icon fas fa-chevron-down text-blue-400 transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer hidden faq-transition mt-4 pt-4 border-t border-gray-700">
+                        <p class="text-gray-300 leading-relaxed">
+                            We provide comprehensive support including dedicated onboarding specialists, comprehensive training for your team, detailed documentation, video tutorials, and 24/7 technical support via chat, email, and phone. Our support team has an average response time of 15 minutes. We also offer quarterly business reviews to optimize your automation strategy and identify new opportunities. Premium clients receive a dedicated account manager and priority support. We're committed to your success and view ourselves as an extension of your team.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item rounded-lg p-6 backdrop-blur-sm">
+                    <div class="faq-question flex items-center justify-between">
+                        <h3 class="text-lg font-semibold text-white">What is the pricing model and are there hidden costs?</h3>
+                        <i class="faq-icon fas fa-chevron-down text-blue-400 transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer hidden faq-transition mt-4 pt-4 border-t border-gray-700">
+                        <p class="text-gray-300 leading-relaxed">
+                            We offer flexible pricing based on your specific needs and usage. Our transparent pricing model has no hidden fees—what you see is what you pay. We offer starter packages for small businesses, professional packages for growing companies, and enterprise solutions for large organizations. Pricing is based on the number of automations, data volume, and support level. Most clients see their investment returned within 3-6 months through cost savings and efficiency gains. We're happy to provide a custom quote after understanding your specific requirements.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-24 md:py-32 relative">
+        <div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/95 to-gray-900 z-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+            <div class="text-center space-y-8">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                    Ready to Transform Your Business?
+                </h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                    Join hundreds of forward-thinking companies that are already saving time, reducing costs, and scaling effortlessly with AI automation. Start your transformation journey today.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center pt-8">
+                    <a href="https://aiautomation.agency/book-demo" class="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-bold text-lg button-hover">
+                        Schedule Your Demo
+                    </a>
+                    <a href="mailto:hello@aiautomation.agency" class="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-bold text-lg button-hover hover:bg-blue-500 hover:text-white transition-all duration-300">
+                        Contact Our Team
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 border-t border-gray-800 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-bolt text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white">N8N Automation</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Transforming businesses through intelligent AI automation and process optimization.
+                    </p>
+                    <div class="flex space-x-4 pt-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-300" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin text-gray-400 hover:text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-300" aria-label="Twitter">
+                            <i class="fab fa-twitter text-gray-400 hover:text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-300" aria-label="Facebook">
+                            <i class="fab fa-facebook text-gray-400 hover:text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-6">Product</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#features" class="footer-link text-gray-400 hover:text-blue-400">Features</a></li>
+                        <li><a href="#benefits" class="footer-link text-gray-400 hover:text-blue-400">Benefits</a></li>
+                        <li><a href="#testimonials" class="footer-link text-gray-400 hover:text-blue-400">Testimonials</a></li>
+                        <li><a href="#faq" class="footer-link text-gray-400 hover:text-blue-400">FAQ</a></li>
+                        <li><a href="https://aiautomation.agency/book-demo" class="footer-link text-gray-400 hover:text-blue-400">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-6">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-blue-400">About Us</a></li>
+                        <li><a href="blog.html" class="footer-link text-gray-400 hover:text-blue-400">Blog</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-blue-400">Careers</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-blue-400">Contact</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-blue-400">Press</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-6">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="privacy.html" class="footer-link text-gray-400 hover:text-blue-400">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="footer-link text-gray-400 hover:text-blue-400">Terms of Service</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-blue-400">Cookie Policy</a></li>
+                        <li><a href="#" class="footer-link text-gray-400 hover:text-blue-400">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-800 pt-12">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-gray-400 text-sm">
+                        &copy; 2025 N8N Automation Agency. All rights reserved.
+                    </p>
+                    <p class="text-gray-400 text-sm">
+                        Email: <a href="mailto:hello@aiautomation.agency" class="text-blue-400 hover:text-blue-300">hello@aiautomation.agency</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // FAQ Accordion Toggle
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                if (question) {
+                    question.addEventListener('click', () => {
+                        const answer = item.querySelector('.faq-answer');
+                        const isOpen = !answer.classList.contains('hidden');
+                        
+                        // Close all other FAQ items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.querySelector('.faq-answer')?.classList.add('hidden');
+                                otherItem.querySelector('.faq-icon')?.classList.remove('rotate-180');
+                            }
+                        });
+                        
+                        // Toggle current item
+                        answer?.classList.toggle('hidden');
+                        item.querySelector('.faq-icon')?.classList.toggle('rotate-180');
+                    });
+                }
+            });
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
